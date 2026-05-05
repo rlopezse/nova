@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { FilterComponent } from '../Filter/filter';
+import { FilterComponent } from '../filter/filter';
+import { CartComponent } from '../cart/cart';
 
 @Component({
   selector: 'app-root',
-  imports: [FilterComponent],
+  imports: [FilterComponent, CartComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
