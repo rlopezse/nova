@@ -1,1 +1,1 @@
-nova, igual que frontier pero en angular
+☄️ Nova es un proyecto Front-End (Ecommerce), que busca explorar y refrescar conocimientos en Angular, Typescript, Css, etc. está conectado al proyecto Backend llamado Horizon, el cual es un proyecto de NodeJS, Express y MongoDB. Ambos proyectos se encuentran en desarrollo, por lo que se irán actualizando con nuevas funcionalidades y mejoras. https://github.com/rlopezse/horizon
