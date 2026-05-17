@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class ContactComponent{}
+export class ContactComponent {}
