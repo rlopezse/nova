@@ -6,9 +6,5 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   //esto registra modulos para usarlos en la App
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideHttpClient(),
-    provideRouter(routes)
-  ],
+  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), provideRouter(routes)],
 };
