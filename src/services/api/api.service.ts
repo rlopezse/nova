@@ -14,12 +14,16 @@ type Product = {
   isFreeShipping: boolean;
 };
 
+type ApiResponse = {
+  data: Product[];
+};
+
 @Injectable({ providedIn: 'root' })
 export class ApiService {
   private http = inject(HttpClient);
   private baseUrl = 'https://proyect-horizon.com';
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}/api/products`);
+  getProducts(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(`${this.baseUrl}/api/products`);
   }
 }
