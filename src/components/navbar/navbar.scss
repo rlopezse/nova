@@ -6,6 +6,11 @@
     font-weight: 800;
     color: var(--B);
     text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--red);
+    }
   }
 
   &_container {
@@ -21,9 +26,34 @@
   &_links {
     display: flex;
     gap: calc(16px * 2);
+
+    button {
+      color: var(--gray-600);
+      transition: color 0.2s ease-in-out;
+
+      &.active {
+        color: var(--red);
+      }
+
+      &:hover {
+        color: var(--red);
+      }
+    }
   }
 
   &_register {
-    color: var(--red);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: calc(16px * 2);
+      height: cacl(16px * 2);
+    }
+
+    span {
+      display: none;
+      color: var(--red);
+    }
   }
 }
