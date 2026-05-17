@@ -1,0 +1,29 @@
+.navbar {
+  border-bottom: 1px solid var(--gray-200);
+
+  &_logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--B);
+    text-transform: uppercase;
+  }
+
+  &_container {
+    max-width: 768px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(16px * 2) 0;
+  }
+
+  &_links {
+    display: flex;
+    gap: calc(16px * 2);
+  }
+
+  &_register {
+    color: var(--red);
+  }
+}
