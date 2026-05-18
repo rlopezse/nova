@@ -9,7 +9,7 @@
     transition: color 0.2s ease-in-out;
 
     &:hover {
-      color: var(--red);
+      color: var(--primary);
     }
   }
 
@@ -32,11 +32,11 @@
       transition: color 0.2s ease-in-out;
 
       &.active {
-        color: var(--red);
+        color: var(--primary);
       }
 
       &:hover {
-        color: var(--red);
+        color: var(--primary);
       }
     }
   }
@@ -53,7 +53,7 @@
 
     span {
       display: none;
-      color: var(--red);
+      color: var(--primary);
     }
   }
 }
