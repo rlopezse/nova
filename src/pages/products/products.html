@@ -3,7 +3,6 @@
     <app-filter></app-filter>
   </div>
   <div class="products_grid">
-    <h1 class="products_h1">Productos</h1>
     <div class="products_grid_container">
       @for (product of products(); track product.id) {
         <app-product-card [product]="product"></app-product-card>
