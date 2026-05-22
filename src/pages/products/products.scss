@@ -9,7 +9,7 @@
   &_grid {
     &_container {
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: calc(16px * 3) calc(16px * 2);
       display: grid;
     }
   }

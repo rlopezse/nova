@@ -1,6 +1,6 @@
 import { Component, signal, inject } from '@angular/core';
 import { FilterComponent } from '../../components/filter/filter';
-import { ProductCardComponent } from './product-card/product-card';
+import { ProductCardComponent } from '../../components/product-card/product-card';
 import { ApiService } from '../../services/api/api.service';
 
 type Product = {

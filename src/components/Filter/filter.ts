@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { FilterService } from '../../services/filter/filter.service';
+import { Component } from '@angular/core';
+//import { FilterService } from '../../services/filter/filter.service';
+
 
 @Component({
   selector: 'app-filter',
@@ -7,5 +8,7 @@ import { FilterService } from '../../services/filter/filter.service';
   styleUrl: './filter.scss',
 })
 export class FilterComponent {
-  filterService = inject(FilterService);
+  categories: string[] = ['apple', 'samsung', 'xiaomi', 'huawei']
+  ordenarPor: string[] = ['menor precio', 'mayor precio']
+  //filterService = inject(FilterService);
 }
