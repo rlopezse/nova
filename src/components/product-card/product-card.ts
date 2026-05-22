@@ -22,4 +22,3 @@ type Product = {
 export class ProductCardComponent {
   product = input.required<Product>();
 }
-
