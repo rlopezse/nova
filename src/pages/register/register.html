@@ -1,1 +1,42 @@
-<p>register works!</p>
+<section class="login">
+  <p>Crea tu cuenta y compra con envíos gratis</p>
+  <div class="login_wrapper">
+    <div class="login_social">
+      <a href="#"><img src="assets/img/google.png" alt="Google" /></a>
+    </div>
+    <form class="login_form" action="/" method="post">
+      <div class="login_form_input">
+        <label for="username">Email</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+      <div class="login_form_input">
+        <label for="username">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="login_form_input_passwordclues">
+        <div class="login_form_input">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <i class="login_form_eye"></i>
+        </div>
+        <div class="form_clues">
+          <ul>
+            <li><i class="form_clues_circle"></i> <span>Usa mínimo 8 caracteres</span></li>
+            <li><i class="form_clues_error"></i> <span>Usa al menos 1 mayúscula</span></li>
+            <li>
+              <i class="form_clues_success"></i>
+              <span>No uses secuencias como 123 ni caracteres repetidos como aaa.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        Al continuar, acepto los Términos y condiciones y autorizo el uso de mis datos de acuerdo a
+        la Declaración de privacidad.
+      </p>
+      <button type="submit">Continuar</button>
+    </form>
+    <p>Ya tienes una cuenta? <button type="button">Inicia sesión</button></p>
+  </div>
+</section>
