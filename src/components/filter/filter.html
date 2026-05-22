@@ -1,0 +1,15 @@
+<div class="filter">
+  <h3 class="filter_title">Ordenar por:</h3>
+  <div class="filter_buttons">
+    @for (item of ordenarPor; track item) {
+      <button class="filter_button">{{ item }}</button>
+    }
+  </div>
+
+  <h3 class="filter_title">Marcas:</h3>
+  <div class="filter_buttons">
+    @for (item of categories; track item) {
+      <button class="filter_button">{{ item }}</button>
+    }
+  </div>
+</div>
