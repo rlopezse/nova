@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { PricePipe } from '../../shared/pipes/price.pipe';
 
 type Product = {
   id: number;
@@ -14,11 +15,11 @@ type Product = {
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [PricePipe],
   templateUrl: './product-card.html',
   styleUrl: './product-card.scss',
 })
 export class ProductCardComponent {
-  product = input<Product>();
+  product = input.required<Product>();
 }
 

@@ -1,0 +1,11 @@
+<div class="product">
+  <div class="product_card">
+    @if (product().isFreeShipping) {
+      <span class="product_card_badge">Envío Gratis</span>
+    }
+    <img src="/static/products/{{ product().sku }}.webp" alt="{{ product().title }}" class="product_card_image" />
+    <button class="product_card_button"><i class="product_icon_cart"></i> <span>Agregar al carrito</span></button>
+  </div>
+  <p class="product_card_title">{{ product().title }}</p>
+  <p class="product_card_price"><span>{{ product().price | price }}</span></p>
+</div>
