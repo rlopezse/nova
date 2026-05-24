@@ -1,0 +1,88 @@
+.login {
+  max-width: 490px;
+  width: calc(100% - 32px);
+  margin: 32px auto 0;
+
+  &_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: calc(16px * 2);
+    text-align: center;
+  }
+
+  &_wrapper {
+    background: var(--white);
+    padding: calc(16px * 2);
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+  }
+
+  &_form {
+    margin: calc(16px * 1) 0;
+
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-500);
+      margin-bottom: 8px;
+      padding-left: 8px;
+    }
+
+    &_input {
+      input {
+        width: 100%;
+        padding: 16px;
+        border-radius: 8px;
+        border: 1px solid var(--gray-200);
+        font-size: 16px;
+        margin-bottom: calc(16px * 1);
+        background-color: var(--white);
+
+        &:focus {
+          outline: none;
+          border-color: var(--black);
+        }
+      }
+    }
+
+    &_button {
+      width: 100%;
+      padding: 16px;
+      background-color: var(--black);
+      color: var(--white);
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+
+    &_alreadyr {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+
+      button {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  &_clues {
+    display: none;
+  }
+}
