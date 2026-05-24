@@ -4,21 +4,21 @@ import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { api } from '../../environments/environment';
 
+
 @Component({
-  selector: 'app-register',
+  selector: 'app-login',
   imports: [ReactiveFormsModule, RouterLink],
-  templateUrl: './register.html',
-  styleUrl: './register.scss',
+  templateUrl: './login.html',
+  styleUrl: './login.scss',
 })
-export class RegisterComponent {
-  form: FormGroup;
+export class LoginComponent {
+    form: FormGroup;
 
   constructor(
     private http: HttpClient,
     private fb: FormBuilder,
   ) {
     this.form = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
@@ -28,7 +28,7 @@ export class RegisterComponent {
     event.preventDefault();
     console.log(this.form.valid);
     if(this.form.valid) {
-      this.http.post(api+ '/user/register', this.form.value).subscribe((response) => {
+      this.http.post(api+ '/user/login', this.form.value).subscribe((response) => {
         console.log(response);
       });
     }

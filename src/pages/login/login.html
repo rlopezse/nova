@@ -1,0 +1,35 @@
+<section class="login">
+  <p class="login_title">
+    Ingresa tu e-mail<br />
+    para iniciar sesión
+  </p>
+  <div class="login_wrapper">
+    <form class="login_form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+      <div class="login_form_input">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" formControlName="email" value="rza.lopez.s@gmail.com" />
+      </div>
+      <div class="login_form_input_passwordclues">
+        <div class="login_form_input">
+          <label for="password">Password:</label>
+          <input type="password" id="password" formControlName="password" value="Rolandouno-1" />
+          <i class="login_form_eye"></i>
+        </div>
+        <div class="form_clues">
+          <ul>
+            <li><i class="form_clues_circle"></i> <span>Usa mínimo 8 caracteres</span></li>
+            <li><i class="form_clues_error"></i> <span>Usa al menos 1 mayúscula</span></li>
+            <li>
+              <i class="form_clues_success"></i>
+              <span>No uses secuencias como 123 ni caracteres repetidos como aaa.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="submit" class="login_form_button">Continuar</button>
+    </form>
+    <p class="login_form_alreadyr">
+      No tienes una cuenta? <button routerLink="/register" type="button">Registrate</button>
+    </p>
+  </div>
+</section>
