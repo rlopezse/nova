@@ -27,8 +27,8 @@ export class RegisterComponent {
   onSubmit(event: Event) {
     event.preventDefault();
     console.log(this.form.valid);
-    if(this.form.valid) {
-      this.http.post(api+ '/user/register', this.form.value).subscribe((response) => {
+    if (this.form.valid) {
+      this.http.post(api + '/user/register', this.form.value).subscribe((response) => {
         console.log(response);
       });
     }
