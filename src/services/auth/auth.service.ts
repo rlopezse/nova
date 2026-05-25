@@ -11,6 +11,6 @@ const isLoggedIn = (): boolean => {
   } catch {
     return false;
   }
-}
+};
 
 export default isLoggedIn;

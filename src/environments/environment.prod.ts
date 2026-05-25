@@ -7,4 +7,3 @@ export const api = {
   production: true,
   url: 'https://proyect-horizon.com',
 };
-
