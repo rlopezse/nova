@@ -1,0 +1,14 @@
+.contact {
+  &_block {
+    padding-bottom: calc(16px * 2);
+  }
+
+  &_link {
+    color: var(--primary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
