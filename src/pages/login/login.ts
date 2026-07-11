@@ -43,7 +43,7 @@ export class LoginComponent {
     if (this.form.valid) {
       this.login$(this.form.value).subscribe({
         next: (response) => {
-          this.router.navigate(['/contacto']);
+          this.router.navigate(['/productos']);
           console.log(response);
         },
         error: (err) => {

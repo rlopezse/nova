@@ -39,6 +39,11 @@
         color: var(--primary);
       }
     }
+
+    &_login {
+      display: flex;
+      gap: 32px;
+    }
   }
 
   &_register {
