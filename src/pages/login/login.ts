@@ -29,7 +29,7 @@ export class LoginComponent implements AfterViewInit {
 
   login$(credentials: ApiLoginPayload) {
     return this.http.post<ApiLoginResponse>(api.url + '/user/login', credentials).pipe(
-      tap((res: ApiLoginResponse) => {
+      tap((res) => {
         console.log(res);
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.user));
@@ -70,9 +70,17 @@ export class LoginComponent implements AfterViewInit {
   handleCredentialResponse(response: any) {
     // desde aquí puedes enviar el token a tu backend para autenticar al usuario
     this.http
-      .post(api.url + '/user/login-google', { idToken: response.credential })
-      .subscribe((response) => {
-        console.log(response);
+      .post<ApiLoginResponse>(api.url + '/user/login-google', { idToken: response.credential })
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          localStorage.setItem('token', res.data.token);
+          localStorage.setItem('user', JSON.stringify(res.data.user));
+          this.router.navigate(['/productos']);
+        },
+        error: (err) => {
+          console.log("error en login con google", err);
+        }
       });
   }
 }
