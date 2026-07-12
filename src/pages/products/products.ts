@@ -6,7 +6,7 @@ import { Product } from '../../types/products/products';
 
 @Component({
   selector: 'app-products',
-  imports: [FilterComponent, ProductCardComponent ],
+  imports: [FilterComponent, ProductCardComponent],
   templateUrl: './products.html',
   styleUrl: './products.scss',
 })

@@ -60,17 +60,19 @@ export class LoginComponent implements AfterViewInit {
       callback: this.handleCredentialResponse.bind(this),
     });
 
-    google.accounts.id.renderButton(
-      document.getElementById('google-button'),
-      {
-        theme: 'outline',
-        size: 'large',
-        shape: 'pill'
-      }
-    );
+    google.accounts.id.renderButton(document.getElementById('google-button'), {
+      theme: 'outline',
+      size: 'large',
+      shape: 'pill',
+    });
   }
 
-  private handleCredentialResponse(response: any): void {
-    console.log(response);
+  handleCredentialResponse(response: any) {
+    // desde aquí puedes enviar el token a tu backend para autenticar al usuario
+    this.http
+      .post(api.url + '/user/login-google', { idToken: response.credential })
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 }

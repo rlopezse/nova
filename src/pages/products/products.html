@@ -4,15 +4,15 @@
   </div>
   <div class="products_grid">
     <div class="products_grid_container">
-    @if (products() === null) {
-      <p>Cargando productos...</p>
-    } @else if (products().length === 0) {
-      <p>No hay productos</p>
-    } @else {
-      @for (product of products(); track product.id) {
-        <app-product-card [product]="product"></app-product-card>
+      @if (products() === null) {
+        <p>Cargando productos...</p>
+      } @else if (products().length === 0) {
+        <p>No hay productos</p>
+      } @else {
+        @for (product of products(); track product.id) {
+          <app-product-card [product]="product"></app-product-card>
+        }
       }
-    }
     </div>
   </div>
 </section>

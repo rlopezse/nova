@@ -5,7 +5,7 @@ export const recaptcha = {
 
 export const googleClientId = {
   production: false,
-  id: "933671057625-0r5qohtjgbc0q8c7rm9nud0f32dnevgm.apps.googleusercontent.com"
+  id: '933671057625-0r5qohtjgbc0q8c7rm9nud0f32dnevgm.apps.googleusercontent.com',
 };
 
 export const api = {
