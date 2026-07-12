@@ -7,7 +7,7 @@ export interface ApiLoginResponse {
   data: {
     token: string;
     user: {
-      id: number;
+      id?: number;
       email: string;
       name: string;
       createdAt: string;

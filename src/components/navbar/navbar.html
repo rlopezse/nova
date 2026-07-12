@@ -6,21 +6,13 @@
       <button routerLink="/contact" routerLinkActive="active" type="button">Contacto</button>
     </div>
 
-      <div class="navbar_links_login">
+    <div class="navbar_links_login">
       @if (!isLoggedIn()) {
-        <button routerLink="/register" type="button" class="navbar_register">
-          Crea tu cuenta
-        </button>
-        <button routerLink="/login" type="button" class="navbar_register">
-          Ingresa
-        </button>
+        <button routerLink="/register" type="button" class="navbar_register">Crea tu cuenta</button>
+        <button routerLink="/login" type="button" class="navbar_register">Ingresa</button>
       } @else {
-        <button routerLink="/favs" type="button" class="navbar_register">
-          Favoritos
-        </button>
-        <button routerLink="/shopping" type="button" class="navbar_register">
-          Carrito
-        </button>
+        <button routerLink="/favs" type="button" class="navbar_register">Favoritos</button>
+        <button routerLink="/shopping" type="button" class="navbar_register">Carrito</button>
       }
     </div>
   </div>

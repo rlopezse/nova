@@ -12,7 +12,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent, pathMatch: 'full' },
   { path: 'register', component: RegisterComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
-  { path: 'favs', component: FavsComponent, canActivate: [authGuard]},
-  { path: 'shopping', component: ShoppingComponent, canActivate: [authGuard]},
+  { path: 'favs', component: FavsComponent, canActivate: [authGuard] },
+  { path: 'shopping', component: ShoppingComponent, canActivate: [authGuard] },
   { path: '**', redirectTo: '/products' },
 ];

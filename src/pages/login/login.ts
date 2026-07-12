@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, Router } from '@angular/router';
-import { api } from '../../environments/environment';
+import { api, googleClientId } from '../../environments/environment';
 import { ApiLoginPayload, ApiLoginResponse } from '../../types/login/login';
 
 @Component({
@@ -12,7 +12,7 @@ import { ApiLoginPayload, ApiLoginResponse } from '../../types/login/login';
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
-export class LoginComponent {
+export class LoginComponent implements AfterViewInit {
   form: FormGroup;
   errorMessage: string | null = null;
 
@@ -29,7 +29,7 @@ export class LoginComponent {
 
   login$(credentials: ApiLoginPayload) {
     return this.http.post<ApiLoginResponse>(api.url + '/user/login', credentials).pipe(
-      tap((res: ApiLoginResponse) => {
+      tap((res) => {
         console.log(res);
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('user', JSON.stringify(res.data.user));
@@ -52,5 +52,35 @@ export class LoginComponent {
         },
       });
     }
+  }
+
+  ngAfterViewInit(): void {
+    google.accounts.id.initialize({
+      client_id: googleClientId.id,
+      callback: this.handleCredentialResponse.bind(this),
+    });
+
+    google.accounts.id.renderButton(document.getElementById('google-button'), {
+      theme: 'outline',
+      size: 'large',
+      shape: 'pill',
+    });
+  }
+
+  handleCredentialResponse(response: any) {
+    // desde aquí puedes enviar el token a tu backend para autenticar al usuario
+    this.http
+      .post<ApiLoginResponse>(api.url + '/user/login-google', { idToken: response.credential })
+      .subscribe({
+        next: (res) => {
+          console.log(res);
+          localStorage.setItem('token', res.data.token);
+          localStorage.setItem('user', JSON.stringify(res.data.user));
+          this.router.navigate(['/productos']);
+        },
+        error: (err) => {
+          console.log("error en login con google", err);
+        }
+      });
   }
 }

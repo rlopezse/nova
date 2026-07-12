@@ -3,6 +3,58 @@
   width: calc(100% - 32px);
   margin: 32px auto 0;
 
+  &_social {
+    margin-bottom: calc(16px * 2);
+    button {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--gray-200);
+      width: 100%;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--gray-100);
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &_separator {
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gray-200);
+      width: 100%;
+    }
+
+    &_label {
+      background-color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0 16px;
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+    }
+  }
+
   &_title {
     font-size: 32px;
     font-weight: 700;
@@ -85,4 +137,10 @@
   &_clues {
     display: none;
   }
+}
+
+#google-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

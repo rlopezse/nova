@@ -8,8 +8,8 @@ export interface Product {
   currencyFormat: string;
   currencyId: string;
   isFreeShipping: boolean;
-};
+}
 
 export interface ApiProductResponse {
   data: Product[];
-};
+}
