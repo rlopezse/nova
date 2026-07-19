@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "nova": {
+    "nebula": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "nova:build:production"
+              "buildTarget": "nebula:build:production"
             },
             "development": {
-              "buildTarget": "nova:build:development"
+              "buildTarget": "nebula:build:development"
             }
           },
           "defaultConfiguration": "development"

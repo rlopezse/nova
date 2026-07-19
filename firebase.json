@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/nova/browser",
+    "public": "dist/nebula/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
