@@ -10,5 +10,5 @@ export const googleClientId = {
 
 export const api = {
   production: true,
-  url: 'https://proyect-horizon.com',
+  url: 'https://solaris-project.com',
 };
